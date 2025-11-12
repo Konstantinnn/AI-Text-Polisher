@@ -192,7 +192,9 @@ export default function App() {
     
     setLoading(true);
     try {
-      const res = await fetch("/api/text/improve", {
+      // Use environment variable for production, fallback to proxy for development
+      const apiUrl = process.env.REACT_APP_API_URL || '';
+      const res = await fetch(`${apiUrl}/api/text/improve`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: input }), // Fixed: wrap in object

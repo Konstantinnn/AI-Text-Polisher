@@ -1,41 +1,117 @@
-# Getting Started with Create React App
+# AI Text Polisher ✨
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A beautiful React application that transforms your text with AI-powered suggestions. Features a modern Bootstrap UI with glassmorphism effects and side-by-side layout.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **AI-Powered Text Enhancement** - Transform any text with multiple suggestion styles
+- **Beautiful Modern UI** - Bootstrap components with glassmorphism effects
+- **Side-by-Side Layout** - Input on the left, suggestions on the right
+- **Copy Functionality** - One-click copy for any suggestion
+- **Responsive Design** - Works perfectly on all devices
+- **Real-time Processing** - Instant AI suggestions with loading animations
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React 19, Bootstrap 5, Tailwind CSS
+- **Styling:** Custom CSS with animations and glassmorphism
+- **Build Tool:** Create React App
+- **Deployment:** Render (Frontend) + .NET API (Backend)
+
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Konstantinnn/AI-Text-Polisher.git
+   cd AI-Text-Polisher/ai-text-polisher
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env.development
+   # Update REACT_APP_API_URL with your backend API URL
+   ```
+
+## 🔧 Development
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Proxy is configured to forward API requests to `http://localhost:5241`.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm run serve`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Serves the production build locally for testing.\
+Useful for testing the production build before deployment.
 
-### `npm run eject`
+## 🚀 Production Deployment
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Render Deployment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Build Settings:**
+   - **Build Command:** `npm install && npm run build`
+   - **Start Command:** `npm run serve`
+   - **Root Directory:** `ai-text-polisher` (if deploying from subfolder)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Environment Variables in Render:**
+   ```
+   REACT_APP_API_URL=https://your-backend-api.onrender.com
+   REACT_APP_ENVIRONMENT=production
+   ```
+
+3. **Auto-Deploy:** Enable for automatic deployments on push to main branch
+
+### Other Platforms
+
+For deployment to Netlify, Vercel, or other platforms:
+
+1. **Build the app:**
+   ```bash
+   npm run build
+   ```
+
+2. **Set environment variables:**
+   ```
+   REACT_APP_API_URL=https://your-backend-api-url.com
+   ```
+
+3. **Deploy the `build` folder**
+
+## 🌐 API Integration
+
+This frontend connects to a .NET Web API backend. Make sure to:
+
+1. **Deploy your backend API** to Render or another platform
+2. **Update environment variables** with the correct API URL
+3. **Enable CORS** in your backend for your frontend domain
+
+## 📱 Browser Support
+
+- ✅ Chrome (latest)
+- ✅ Firefox (latest)  
+- ✅ Safari (latest)
+- ✅ Edge (latest)
+
+## 🎨 Features Showcase
+
+- **Glassmorphism UI** with backdrop blur effects
+- **Gradient animations** and smooth transitions
+- **Bootstrap components** with custom styling
+- **Responsive grid layout** that adapts to all screen sizes
+- **Copy-to-clipboard** functionality with visual feedback
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
